@@ -72,6 +72,7 @@ public class UserController {
 
 	@GetMapping("/userinfo/{aadharcardno}")
 	public User getinfo(@PathVariable("aadharcardno") String aadharcardno){
+		System.out.println("inside getinfo method");
 
 		return userService.getinfo(aadharcardno);
 	}
