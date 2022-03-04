@@ -59,6 +59,7 @@ public class UserController {
 
 	@PutMapping("/updateVoter")
 	public User updateVoter(@RequestBody UserDTO userDto) throws Exception {
+		System.out.println("inside update voter method");
 		return  userService.updateVoter(userDto);
 	}
 
