@@ -42,6 +42,7 @@ public class UserController {
 
 	@PostMapping("/voterLogin")
 	public String loginVoter(@RequestBody UserLogin user) throws com.voterservice.voter.exceptions.IncorrectCredentialsException, AadharcardAlreadyExistException {
+
 		String aadhar = user.aadhaarCardNo;
 		String voterPassword= user.password;
 
@@ -65,6 +66,7 @@ public class UserController {
 
 	@PutMapping("/updatePassword")
 	public User updatePassword(String aadharcardno,String password) throws WrongFormatException {
+		System.out.println("inside update password method");
 		return  userService.updatePassword(aadharcardno,password);
 	}
 
