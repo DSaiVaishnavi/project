@@ -43,7 +43,7 @@ public class UserController {
 
 	@PostMapping("/voterLogin")
 	public String loginVoter(@RequestBody UserLogin user) throws com.voterservice.voter.exceptions.IncorrectCredentialsException, AadharcardAlreadyExistException {
-
+		System.out.println("inside voter login method");
 		String aadhar = user.aadhaarCardNo;
 		String voterPassword= user.password;
 
