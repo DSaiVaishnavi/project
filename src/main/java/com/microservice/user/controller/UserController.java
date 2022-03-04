@@ -19,6 +19,7 @@ public class UserController {
 
 	@PostMapping("/VoterRegistration")
 	public User registerVoter(@RequestBody User user) throws WrongFormatException, AadharcardAlreadyExistException {
+		System.out.println("inside registervoter method");
 		String tempAadhar =user.getAadhaarCardNo();
 			if (tempAadhar != null && !"".equals(tempAadhar)) {
 				User userObj = userService.fetchUserByAadharcardNo(tempAadhar);
